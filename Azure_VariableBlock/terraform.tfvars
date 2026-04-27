@@ -1,0 +1,1 @@
+resourceGroup_name = "atul_singhRG"
