@@ -27,3 +27,28 @@ resource "azurerm_resource_group" "rg" {
     environment = "prod"           # Defines environment (e.g., dev, staging, prod)
   }
 }
+
+
+
+🚀 Getting Started with Terraform on Azure
+
+If you're beginning your DevOps journey, creating a Resource Group is one of the first and most important steps in Azure.
+
+Here’s a simple Terraform example to create a Resource Group using Infrastructure as Code 👇
+
+🔹 Define the Azure provider
+🔹 Configure authentication
+🔹 Create a Resource Group with tags for better management
+
+💡 Why this matters:
+✔️ Automates infrastructure setup
+✔️ Ensures consistency across environments
+✔️ Makes your deployments repeatable and scalable
+
+🧠 Pro Tip:
+Always lock your provider version and use tags for better governance and cost tracking.
+
+📌 Tools Used:
+Terraform + Azure (azurerm provider)
+
+#Terraform #Azure #DevOps #InfrastructureAsCode #CloudComputing #Automation #BeginnerFriendly
