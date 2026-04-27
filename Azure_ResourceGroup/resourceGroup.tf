@@ -1,30 +1,28 @@
-## Terraform ResourceGroup  ##
+## Terraform Resource Group Configuration ##
 
-# We strongly recommend using the required_providers block to set the
-# Azure Provider source and version being used
 terraform {
+  # Defines which providers Terraform should use
   required_providers {
     azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "=4.1.0"
+      source  = "hashicorp/azurerm"   # Official Azure provider maintained by HashiCorp
+      version = "=4.1.0"              # Locks provider version to ensure consistent behavior across environments
     }
   }
 }
 
-# Configure the Microsoft Azure Provider
+# Configure the Azure provider
 provider "azurerm" {
-  features {}
-  subscription_id = "98be8a0e-a472-4391-915d-040d50197832"  # (optional but recommended)
-  tenant_id = "b16e2942-acf7-4664-a827-c99d7e81a77d"
+  features {}   # Required block (even if empty) to enable Azure provider features
 }
 
-# Create a resource group
+# Create a Resource Group in Azure
 resource "azurerm_resource_group" "rg" {
-  name       = "asg-rg-old"
-  location   = "West Europe"
-  managed_by = "Terraform"
-  tags = {
-    environment = "prod"
-    owner       = "atul_singh"
+  name       = "asg-rg-old"      # Name of the Resource Group (must be unique within your subscription)
+  location   = "West Europe"     # Azure region where resources will be deployed
+  managed_by = "Terraform"       # Optional field to indicate this resource is managed by Terraform
+
+  tags = {                       # Key-value metadata for organization and cost tracking
+    environment = "prod"         # Defines environment (e.g., dev, staging, prod)
+    owner       = "atul_singh"   # Owner or responsible person/team
   }
 }
