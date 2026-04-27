@@ -3,3 +3,32 @@
 *.tfstate.*
 .DS_Store
 .terraform.lock.hcl
+
+
+What is a .gitignore file?
+
+# A .gitignore file is used in Git to specify which files and directories should not be tracked or committed to the repository.
+# It helps maintain a clean, secure, and efficient codebase by excluding unnecessary or sensitive files.
+
+
+# Command to Create .gitignore
+# touch .gitignore
+
+Or directly create and add content:
+
+# echo ".terraform/
+# *.tfstate
+# *.tfstate.*
+# .DS_Store
+# .terraform.lock.hcl" >> .gitignore
+
+Purpose of .gitignore :
+
+# * Prevents sensitive or unwanted files from being committed
+# * Keeps the repository clean and organized
+# * Avoids unnecessary conflicts in shared environments
+# * Reduces repository size by excluding generated files
+# * Ensures only relevant source code and configurations are version-controlled
+# * A .gitignore file is used to exclude specific files and directories from being tracked in Git, helping maintain secu.terraform/
+
+
